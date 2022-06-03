@@ -26,7 +26,7 @@ db.order.insert({order_no:03,year:2018,paid:"N",cost:{price:33,currency:"EUR"},i
 --
 -- SQl Query Statements
 --
--- -----Question 1---------------
+-- -----Question1---------------
 
 db.order.find({paid:"Y"}).pretty()
 
