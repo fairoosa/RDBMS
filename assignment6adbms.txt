@@ -1,0 +1,36 @@
+-- 
+-- Roll No: <10>
+-- Name: <FAIROOSA KK>
+-- Program: <MongoDB Operations>>
+-- 
+
+
+--
+-- Table structure for table <order>
+--
+
+db.createCollection('order')
+
+--
+--  Dumping data for table <order>
+--
+
+ db.order.insert({order_no:01,year:2020,paid:"Y",cost:{price:30,currency:"INR"},items:{pno:"p1",colors:["blue","black"],quantity:15},delivery_days:5})
+ db.order.insert({order_no:02,year:2020,paid:"Y",cost:{price:13,currency:"DLR"},items:[{pno:"p2",colors:'white',quantity:4},{pno:"p3",colors:        ["white","black"],quantity:1}],delivery_days:4})
+db.order.insert({order_no:03,year:2018,paid:"N",cost:{price:33,currency:"EUR"},items:{pno:"p3",colors:["blue","black"],quantity:4},delivery_days:4})
+ db.order.insert({order_no:04,year:2017,paid:"Y",cost:{price:17,currency:"INR"},items:[{pno:"p2",colors:["pink","black"],quantity:14},{pno:"p4",colors:"white",quantity:1}],delivery_days:2})
+ db.order.insert({order_no:05,year:2020,paid:"Y",cost:{price:19,currency:"INR"},items:{pno:"p1",quantity:14},delivery_days:3})
+
+
+--
+--
+-- SQl Query Statements
+--
+-- -----Question 1---------------
+
+db.order.find({paid:"Y"}).pretty()
+
+
+
+
+
