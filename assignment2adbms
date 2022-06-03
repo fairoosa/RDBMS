@@ -1,0 +1,49 @@
+-- 
+-- Roll No: <10>
+-- Name: <Fairoosa kk>
+-- Program: <Assignment 2>
+-- 
+
+
+-- 
+--Dumping data for table <faculty>
+-- 
+
+insert into faculty values(1,'allu','1999-04-13','technician');
+insert into faculty values(2,'zafar','2000-03-11','tester');
+insert into faculty values(3,'zenhar','2000-04-22','coder');
+insert into faculty values(4,'avinash','1998-02-16','web designer');
+insert into faculty values(5,'alakanandha','2000-01-3','pen tester');
+
+--
+-- Dumping data for table <subject>
+--
+
+insert into subject values('Dfca','2021-08-13','2022-05-15',301,1);
+insert into subject values('Python','2020-09-11','2023-07-3',302,2);
+insert into subject values('Ai','2019-03-1','2024-06-7',303,3);
+insert into subject values('fp','2020-04-11','2024-05-17',304,4);
+insert into subject values('se','2018-12-16','2021-04-17',305,5);
+
+--Table structure for table <subject>--
+
+alter table subject add duration int;
+
+--Table structure for table <faculty>-
+--alter table subject drop column sdate;
+--alter table subject drop column edate;
+
+--Table structure for table <teaches>-
+
+create table teaches(fno char(5)not null,sname varchar(15)not null,sdate date not null,edate date not null,primary key(fno,sname),foreign key(fno)references faculty(fno),foreign key(sname)references subject(sname));
+
+
+
+-- --------insert/update statement commands----------- # This line may be removed in the actcual file
+
+--
+-- SQl Query Statements
+--
+
+-- -----SQL query statments preceeded by the its question-------- # This line may be removed in the actual file
+-- -----Question number should be commented---------------#This line may be removed in the actual file
